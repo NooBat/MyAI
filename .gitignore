@@ -1,16 +1,8 @@
 .DS_Store
 
-**/TrainingSet     
-**/TestingSet
-
 **/Model
 
 **/HandsOnExercises
 
-**/numberLabel
-**/numberLabel2
-**/numberLabel3
-
-**/charLabel
-**/charLabel2
-**/charLabel3
+**/TrainingReport
+**/__pycache__
