@@ -96,8 +96,10 @@ def create_model(path_to_weights=None, load_weights=True):
     if load_weights:
         model.load_weights(path_to_weights)
 
-    model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.000001),
+    model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.001),
                                                 loss='sparse_categorical_crossentropy',
-                                                metrics=['accuracy'])
+                                                metrics=[
+                                                    tf.keras.losses.SparseCategoricalCrossentropy(name='sparse_categorical_crossentropy'),
+                                                    'accuracy'])
 
     return model
